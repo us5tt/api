@@ -1,13 +1,10 @@
 from flask import Flask
 from flask_restful import reqparse, abort, Api, Resource
-from flask_sqlalchemy import SQLAlchemy
-# from datatime import datatime
+
 
 app = Flask(__name__)
 api = Api(app)
 app.config.from_object(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///allpars.db'
-db = SQLAlchemy(app)
 
 
 ITEMS = {
@@ -19,13 +16,13 @@ ITEMS = {
 }
 
 
-class Parseritem(db.Model):
-    __tablename__ = 'parseitems'
-    id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(100), nullable=False)
-    usd_price = db.Column(db.String(50), nullable=False)
-    city = db.Column(db.String(50), nullable=False)
-    description = db.Column(db.Text(500), nullable=False)
+#class Parseritem(db.Model):
+#    __tablename__ = 'parseitems'
+#    id = db.Column(db.Integer, primary_key=True)
+#    title = db.Column(db.String(100), nullable=False)
+#    usd_price = db.Column(db.String(50), nullable=False)
+#    city = db.Column(db.String(50), nullable=False)
+#    description = db.Column(db.Text(500), nullable=False)
 #    date = db.Column(db.DateTime, default=data)
 
 
