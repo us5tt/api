@@ -1,5 +1,5 @@
-# api
-# створена модель api, у якій реалізовано метод 'GET', 'POST', 'PUT', 'DELETE', 'GET_id''
-# далі хочу створити і підключити БД
+# api_flask
+# created api model, which implements the method 'GET', 'POST', 'PUT', 'DELETE', 'GET_id' '
+#
 #
 #
